@@ -7,6 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Eric Lavallee Professional Profile</title>
       <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/9f8aaa03fa.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -14,193 +15,169 @@
 
 <body>
       <header>
-
-            <img class="logo" src="Images/TransLogo.png" alt="Profile Picture">
-
             <nav>
+                  <div class="navbar">
+                        <div class="logo"><a href="#">Eric Lavallee</a></div>
+                        <ul class="links">
+                              <li><a href="#Introduction">Introduction</a></li>
+                              <li><a href="#Skills">Skills</a></li>
+                              <li><a href="#Work_History">Projects</a></li>
+                              <li><a href="#Contact_Information">Contact Information</a></li>
+                        </ul>
 
-                  <ul class="nav_links">
+                        <a href="#Contact_Information" class="action_btn">Contact</a>
+                        <div class="toggle_btn">
+                              <i class="fa-solid fa-bars"></i>
+                        </div>
+                  </div>
 
+                  <div class="dropdown_menu">
                         <li><a href="#Introduction">Introduction</a></li>
                         <li><a href="#Skills">Skills</a></li>
                         <li><a href="#Work_History">Work History</a></li>
                         <li><a href="#Contact_Information">Contact Information</a></li>
-
-                  </ul>
+                        <li><a href="#Contact_Information" class="action_btn">Contact</a></li>
+                  </div>
             </nav>
-            <!-- <a class="cta" href="#"><button>Contact</button></a> -->
-
-
 
       </header>
 
-      <div class="container-1">
+      <main>
+
+            <section id="Introduction">
+                  <br>
+                  <br>
+                  <img src="Images/me copy.png" alt="Profile Image" height="270" width="200">
+                  <br>
+                  <br>
+                  <br>
+                  <h1>Welcome</h1>
+                  <br>
+                  <br>
+                  <h3> My name is Eric Lavallee and I am taking this bootcamp to further <br>
+                        my career in website and app development.</h3><br>
+                  <h3>I am originally from Maine and have been living in Austin Texas for the last 14 years.</h3><br>
+                  <h3>I am well versed in tech support from my time working at Apple as a Mac+ Senior Advisor <br>
+                        and want to persure new understand and development in this field. </h3>
+
+            </section>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <section id="Skills">
+                  <h1>Skills</h1>
+                  <h3>I am well versed in tech support from my time working at Apple as a Mac+ Senior Advisor <br>
+                        and want to persure new understand and development in this field. </h3> <br>
+                  <h3>I am well versed in tech support from my time working at Apple as a Mac+ Senior Advisor <br>
+                        and want to persure new understand and development in this field. </h3>
+                  <br>
+                  <br>
+                  <h3>Customer Care Account <br>
+                        <br>
+                        Security Creative <br>
+                        <br>
+                        Thinking Troubleshooting <br>
+                        <br>
+                        Organization Attention to Detail <br>
+                        <br>
+                        Retail & Online Sales Solutions Expert
+                  </h3>
+
+
+
+            </section>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <section id="Work_History">
+                  <h1>Projects</h1>
+                  <h3> This is my third week of coding bootcamp at the University of Texas.
+                        <br>These are the project I have completed so far.
+                  </h3> <br>
+
+                  <br>
+                  <div class="flexbox-container">
+                        <div class="flexbox-item flexbox-item-1">
+                              <img src="Images/flex_box-image_one.png" alt="Project one" height="190" width="190">
+
+                        </div>
+
+                        <div class="flexbox-item flexbox-item-2">
+                              <img src="Images/Profile_pic_fb2.png" alt="Project one" height="190" width="190">
+                        </div>
+
+
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <section id="Contact_Information">
+                  <h1>Contact</h1>
+                  <h3> 737.444.3301</h3>
+                  <br>
+                  <h3><a href="tel:+7374443301">Call</a></h3>
+                  <br>
+                  <h3><a href="mailto: e.lavallee13@gmail.com">Send Email</a></h3>
+                  <br>
+                  <h3><a href="https://github.com/elavallee13" target="_blank">GitHub</a></h3>
 
+            </section>
 
-            <div class="box-1"><img src="Images/me copy.png" alt="profile_picture" style="width: 200; height: 290px;">
-            </div>
 
 
-            <div class="box-2">
-                  <h2 id="Introduction"></h2>
-                  <p>My name is Eric Lavallee, I am on my second week of UT's coding bootcamp.</p>
-                  <p>I am a father of two and have been living in Austin Texas for 14 years.</p>
-                  <p>I am very excited to learn more about coding.</p>
+      </main>
 
-            </div>
+      <script>
+            const toggleBTN = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
 
-      </div>
+            toggleBTN.onclick = function () {
+                  dropDownMenu.classList.toggle('open')
 
-      
+                  toggleBtnIcon.classList = isOpen
+                        ? 'fa-solid fa-xmark'
+                        : 'fa-solid fa-bars'
+            }
 
-      <div class="box-3">
-            <h3 id="Skills"> SKILLS</h3>
+      </script>
 
-            <ul>
-                  <li> Creating Ads and using marketing stratgies on Google and social media platforms</li>
-                  <li> Advance troubleshooting</li>
-                  <li> Solutions Expert</li>
-                  <li> Customer Care</li>
-            </ul>
+      <br>
+      <br>
+      <br>
 
-      </div>
-
-
-
-
-
-      <h3 id="Work_History">WORK HISTORY</h3>
-
-
-
-      <Div>
-
-
-            <Strong>
-                  <p>Head of Marketing & Design</p>
-            </Strong>
-            <h3><strong> MAINE MEDICAL CERTIFICATIONS </strong></h3>
-
-
-            <ul>
-                  <li> Creating and deploy marketing stratgies on Google and social media platforms</li>
-            </ul>
-
-
-      </Div>
-
-
-
-      <div>
-
-            <strong>
-                  <p>Mac+ iOS Senior Advisor</p>
-            </strong>
-            <h3><strong>APPLE</strong></h3>
-
-
-
-            <ul>
-
-                  <li> Resolve advanced technical issues escalated from Tier 1 advisors from multiple call groups.</li>
-                  <li> Advance troubleshooting</li>
-                  <li> Last point of contact at AppleCare.</li>
-                  <li> Able to make final decisions on behalf of Apple.</li>
-                  <li> Tier 2 macOS Tier 2 iOS</li>
-                  <li> Account security</li>
-                  <li> Solutions Expert</li>
-                  <li> Customer Care</li>
-                  <li> Partner with Site Support Engineering to find resolutions to cases currently under investigation
-                        with no resolution.</li>
-                  <Strong>
-                        <p>Additional Roles at Apple</p>
-                  </Strong>
-                  <li> Beats Tier 2 Senior Advisor</li>
-                  <li> Account Security Team</li>
-                  <li> Listen To Learn Team</li>
-                  <li> Safety Team</li>
-
-            </ul>
-
-
-      </div>
-
-
-
-      <div>
-
-
-            <strong>
-                  <p>Equipment Operator</p>
-            </strong>
-            <h3><strong>LR Commercial Construction</strong></h3>
-
-
-
-            <ul>
-
-                  <li> Deploy FlexSteel using Heavy Machinery to build 80 mile pipeline.</li>
-                  <p>Skills Acquired</p>
-
-
-                  <li> Leadership Skills</li>
-                  <li> Team Building</li>
-                  <li> Time Deadline Management</li>
-
-            </ul>
-
-
-      </div>
-
-
-
-      <div>
-
-
-            <strong>
-                  <p>Retail Sales Associate - Subject Matter Expert</p>
-            </strong>
-            <h3><strong>AT&T</strong></h3>
-
-
-            <ul>
-                  <li> Sales Trainer - Subject Matter Expert</li>
-                  <li> Activate new lines of service</li>
-                  <li> Upgrade existing customers devices and services.</li>
-                  <li> Recommend new services, TV | Internet and bundle with best rate plan.</li>
-                  <li> On-Board Lead with Shadow</li>
-
-            </ul>
-
-
-      </div>
-
-
-
-      <div\>
-
-
-
-
-
-            <div>
-                  <h3 id="Contact_Information"> Contact Information</h3>
-
-                  <ul>
-                        <li> 737.444.3301-</li>
-                        <li> e.lavallee13@gmail.com-</li>
-                  </ul>
-
-            </div>
-
-
-
-
-            <hr>
-
+      <section id="Footer">
             <footer>
-                  <h4>Full Stack Boot Camp Student</h4>
+                  <h3> Bootcamp Student</h3>
             </footer>
+      </section>
+
+      <br>
+      <br>
+      <br>
 
 </body>
 

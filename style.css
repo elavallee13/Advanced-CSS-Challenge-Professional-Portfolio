@@ -1,97 +1,255 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
-
 * {
-    box-sizing: border-box;
-    margin: 15;
-    padding: 40;
-    background-color: rgb(46, 44, 44);
-}
-
-a, p, li, h1, h2, h3, h4, h5, section, strong, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: auto;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 
 }
-    
 
+body {
+  height: 100vh;
+  background-color: black;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/03/Deep%20Space%204K4145111940.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+
+}
+
+li {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: orange;
+}
+
+/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 0%;
+  position: relative;
+  padding: 0.2rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
 }
 
-.logo {
-    cursor: pointer;
-    margin-left: 0px;
-    width: 210x;
-    height: 120px;
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
 
 }
 
-.nav_links {
-    list-style: none;
+.navbar .links {
+  display: flex;
+  gap: 2rem;
 }
 
-.nav_links li {
-    display: inline-block;
-    padding: 10px 5px;
-
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover {
-    transition: all 0.3s ease 0s;
-    color: black;
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 
 }
 
-button {
-margin-left: 25px;
-padding: 9px 25px;
-background-color: rgb(105, 105, 105);
-border: none;
-border-radius: 40px;
-cursor: pointer;
-transition: all 0.3s ease 0s;
+.action_btn {
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
 
 }
 
-Button:hover {
-    background-color: rgb(27, 27, 27);
+.action_btn:hover {
+  scale: 1.05;
+  color: white;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 290px;
+}
+
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* HERO */
+section#Introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 
 }
 
-h1 {
-    font-size: 40px;
+#Introduction h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+section#Skills {
+  display: flex;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+}
+
+#Skills h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+section#Work_History {
+  display: flex;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+}
+
+#Work_History h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+section#Contact_Information {
+  display: flex;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#Contact_Information h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+section#Footer {
+  display: flex;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+
   }
-  
-  h2 {
-    font-size: 30px;
-  }
-  
-  h3 {
-    font-size: 20px;
+
+  .navbar .toggle_btn {
+    display: block;
   }
 
-  h4 {
-    font-size: 15px;
+  .dropdown_menu {
+    display: block;
   }
 
-  p {
-    font-size: 20px;
-  }
+}
 
+.flexbox-container {
+  display: flex;
+  justify-content: space-around;
 
+}
 
-  .container-1 {
-    display: flex;
-  }
+.flexbox-item {
+  display: flex;
+  width: 200px;
+  margin: 10px;
+  border: 5px solid white;
+  background-color: darkgrey;
+
+}
+
+.flexbox-item-1 {
+  min-height: 200px;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+}
+
+.flexbox-item-3 {
+  min-height: 200px;
+}
